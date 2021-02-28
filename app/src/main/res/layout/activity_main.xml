@@ -9,9 +9,32 @@
 
     <TextView
         android:id="@+id/name_text"
+        style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name"
-        android:textAlignment="center"
-        style="@style/NameStyle" />
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/info_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:importantForAccessibility="no"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bio_text"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="@dimen/layout_padding"
+            android:text="@string/bio" />
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>
